@@ -1,0 +1,6 @@
+tests/
+Dockerfile
+Procfile
+README.md
+*.db
+.git
