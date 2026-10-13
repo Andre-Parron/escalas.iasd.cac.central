@@ -17,7 +17,7 @@ if PG:
     import psycopg
     from psycopg.rows import dict_row
 MINISTERIOS = {
-    "Mídia": ["Fotografia/Filmagem", "Design/Arte",],
+    "Mídia": ["Fotografia/Filmagem", "Design/Arte"],
     "Transmissão": ["Live/YouTube", "Câmeras"],
     "Sonoplastia": ["Mesa de som", "Projeção"],
 }
