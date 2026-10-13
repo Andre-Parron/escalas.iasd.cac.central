@@ -43,7 +43,7 @@ label{display:block;font-weight:600;margin:10px 0 4px;font-size:14px}
 <main id="app"></main><div id="toast"></div>
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim().replace(/\s+/g,' '),uid=()=>Math.random().toString(36).slice(2,9),tk=()=>Array.from(crypto.getRandomValues(new Uint8Array(12)),b=>b.toString(16).padStart(2,'0')).join(''),pad=n=>String(n).padStart(2,'0');
-const M={'Mídia':{i:'📷',f:['Fotografia','Filmagem','Redes Sociais','Design/Arte','Projeção']},'Transmissão':{i:'📡',f:['Live/YouTube','Câmeras','Mesa de corte/Switch','Locução/Apresentação']},'Sonoplastia':{i:'🎚️',f:['Mesa de som','Microfones','Retorno/Monitor','Instrumentos (backline)']}};
+const M={'Mídia':{i:'📷',f:['Fotografia/Filmagem','Design/Arte']},'Transmissão':{i:'📡',f:['Live/YouTube','Câmeras']},'Sonoplastia':{i:'🎚️',f:['Mesa de som','Projeção']}};
 const DIAS=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],CD=[0,3,6],HORA={0:'19:00',3:'19:30',6:'19:00'},okMin=(c,m)=>m!='Transmissão'||c.dia==6;
 const today=()=>{const d=new Date();return`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`},dow=s=>new Date(s+'T12:00:00').getDay(),fd=s=>s.slice(8)+'/'+s.slice(5,7);
 const ls=(k,v)=>{try{if(v===undefined)return JSON.parse(localStorage.getItem('esc_'+k));v===null?localStorage.removeItem('esc_'+k):localStorage.setItem('esc_'+k,JSON.stringify(v))}catch(e){return null}};
