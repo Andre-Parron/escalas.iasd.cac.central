@@ -17,9 +17,9 @@ if PG:
     import psycopg
     from psycopg.rows import dict_row
 MINISTERIOS = {
-    "Mídia": ["Fotografia", "Filmagem", "Redes Sociais", "Design/Arte", "Projeção"],
-    "Transmissão": ["Live/YouTube", "Câmeras", "Mesa de corte/Switch", "Locução/Apresentação"],
-    "Sonoplastia": ["Mesa de som", "Microfones", "Retorno/Monitor", "Instrumentos (backline)"],
+    "Mídia": ["Fotografia/Filmagem", "Design/Arte",],
+    "Transmissão": ["Live/YouTube", "Câmeras"],
+    "Sonoplastia": ["Mesa de som", "Projeção"],
 }
 FUNCOES = {f for fs in MINISTERIOS.values() for f in fs}
 DIAS_CULTO = {0, 3, 6}  # domingo, quarta, sábado (0 = domingo, como no JavaScript)
